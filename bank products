@@ -31,3 +31,9 @@ VALUES
 SELECT MIN(interest_rate)
 FROM bank_products
 WHERE product_type="Loan";
+
+#Which accounts have a minimum balance of $100 or less? Show the product names and minimum balance amounts in the answer. 
+SELECT product_name, minimum_balance
+FROM bank_products
+WHERE minimum_balance<=100
+ORDER BY minimum_balance DESC;
