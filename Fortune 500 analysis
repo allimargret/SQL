@@ -62,3 +62,8 @@ VALUES
 SELECT MAX(paid_time_off_days), company_name
 FROM fortune_companies
 WHERE employees<2000;
+
+#Which company in the Technology industry has the highest revenue?
+SELECT MAX(revenue), company_name
+FROM fortune_companies
+WHERE industry="Technology";
