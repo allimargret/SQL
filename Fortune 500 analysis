@@ -67,3 +67,10 @@ WHERE employees<2000;
 SELECT MAX(revenue), company_name
 FROM fortune_companies
 WHERE industry="Technology";
+
+#Which of the industry categories have a total revenue greater than 1500?
+SELECT SUM(revenue) AS total_revenue, industry
+FROM fortune_companies
+GROUP BY industry
+HAVING total_revenue>1500
+ORDER BY total_revenue ASC;
