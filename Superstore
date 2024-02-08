@@ -61,3 +61,14 @@ WHERE category="Appliances";
 
 SELECT MIN(average_rating), item_name
 FROM superstore;
+
+#How many different items are sold in the store?
+
+SELECT COUNT(DISTINCT item_name)
+FROM superstore;
+
+#How many items in the store have a rating of 4.5 or greater?
+
+SELECT COUNT(DISTINCT item_name)
+FROM superstore
+WHERE average_rating>=4.5;
