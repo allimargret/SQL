@@ -28,46 +28,46 @@ VALUES
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
 
-#List all items in the store, from highest to lowest cost items:
+#1. List all items in the store, from highest to lowest cost items:
 
 SELECT item_name, price
 FROM superstore
 ORDER BY price desc;
 
-#List the average price of an item in the store:
+#2. List the average price of an item in the store:
 
 SELECT AVG(price)
 FROM superstore;
 
-#List the lowest cost item in the Furnishings category:
+#3. List the lowest cost item in the Furnishings category:
 
 SELECT MIN(price), item_name
 FROM superstore
 WHERE category="Furnishings";
 
-#List the highest cost item in the Electronics category:
+#4. List the highest cost item in the Electronics category:
 
 SELECT MAX(price), item_name
 FROM superstore
 WHERE category="Electronics";
 
-#List how many items are in stock in the Appliances category:
+#5. List how many items are in stock in the Appliances category:
 
 SELECT SUM(stock_quantity)
 FROM superstore
 WHERE category="Appliances";
 
-#Show which item has the lowest rating in the store:
+#6. Show which item has the lowest rating in the store:
 
 SELECT MIN(average_rating), item_name
 FROM superstore;
 
-#How many different items are sold in the store?
+#7. How many different items are sold in the store?
 
 SELECT COUNT(DISTINCT item_name)
 FROM superstore;
 
-#How many items in the store have a rating of 4.5 or greater?
+#8. How many items in the store have a rating of 4.5 or greater?
 
 SELECT COUNT(DISTINCT item_name)
 FROM superstore
