@@ -73,5 +73,5 @@ HAVING COUNT(orderID)>=3;
 #10. How many of each type of headphones was sold in the month of February?
 SELECT Product, SUM(quantity)
 FROM BIT_DB.FebSales
-WHERE product LIKE '%headphones%'
+WHERE Product LIKE '%headphones%'
 GROUP BY Product;
