@@ -28,8 +28,21 @@ time_signature integer NOT NULL
 
 #Next, I explored the data using the following SQL. 
 
-#Which artist released the longest song included within this database?
+1. Which song was the most popular with listeners?
+SELECT MAX(popularity), track_name
+FROM BIT_DB.Spotifydata;
+
+2. Which artist released the longest song?
 SELECT artist_name, duration_ms
-FROM Spotifydata
+FROM BIT_DB.Spotifydata
 ORDER BY duration_ms DESC
 LIMIT 1;
+
+3. Most of the tracks in this database have a time signature of 4. Which tracks have a time signature of 3?
+SELECT track_name, time_signature
+FROM BIT_DB.Spotifydata
+WHERE time_signature = 3;
+
+4. What is the quietest track in this collection?
+SELECT track_name, MIN (loudness)
+FROM BIT_DB.Spotifydata;
